@@ -1,0 +1,6 @@
+SELECT c.id_consultas, c.data_consultas, c.horario, c.status, p.nome AS pacientes
+FROM Consultas c
+JOIN Pacientes p ON c.id_paciente = p.id_pacientes
+WHERE c.id_medico = 1
+AND c.data_consultas BETWEEN '2025-10-20' AND '2025-10-30'
+ORDER BY c.data_consultas, c.horario;
