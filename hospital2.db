@@ -1,0 +1,5 @@
+SELECT c.id_consultas, c.data_consultas, c.horario, c.status, m.nome AS medico, m.especialidade
+FROM Consultas c
+JOIN Medico m ON c.id_medico = m.id_medico
+WHERE c.id_paciente = 1
+ORDER BY c.data_consultas;
